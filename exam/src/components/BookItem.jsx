@@ -18,7 +18,7 @@ function BookItem({ elem }) {
             <h3 className='font-bold truncate'>{update.name}</h3>
             <h3 className='font-bold truncate'>{update.author}</h3>
             <p>{update.date}</p>
-            <p>{update.status ? 'available' : 'gven out'}</p>
+            <p>{update.status ? '😊 available' : '😥 given out'}</p>
             <button className='border-2 border-orange-300 bg-yellow-200 text p-2' onClick={() => setChange(prev => !prev)} >Update</button>
             <button
                 type='delete'

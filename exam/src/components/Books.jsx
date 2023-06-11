@@ -19,20 +19,22 @@ function Books() {
         let target = event.target;
         let name = target.name.value;
         let date = target.date.value;
+        let author = target.author.value;
         let status = target.status.checked;
         let photo = target.photo.value || 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/ArtOfComputerProgramming.svg/1200px-ArtOfComputerProgramming.svg.png';
         if (name && date) {
             setCounterForId(prev => prev + 1)
-            dispatch(add({ name: name, date: date, status: status, id: counterForId, photo: photo }))
+            dispatch(add({ name: name, date: date, status: status, id: counterForId, photo: photo, author: author }))
             target.name.value = ''
             target.date.value = ''
             target.status.checked = ''
             target.photo.value = ''
+            target.author.value = ''
         }
     }
     return (
         <div className='flex gap-5 max-sm:flex-col px-4'>
-            <div className="w-2/5 mr-10 max-sm:w-full">
+            <div className="w-2/5 mr-10 max-sm:w-full h-max rounded-xl">
                 <form action="" onSubmit={addBook} className='grid gap-3 text-lg font-mono'>
                     <div className="lg:flex-row md:flex-col sm:flex-col flex justify-between">
                         <label htmlFor="name">Name</label>
@@ -81,7 +83,7 @@ function Books() {
                         className="border-2 w-full p-2 rounded-lg text-lg font-mono font-bold bg-indigo-200 border-indigo-500">Add a book</button>
                 </form>
             </div>
-            <div className="w-3/5 grid xl:grid-cols-3 md:grid-cols-2 p-2 lg:gap-10 gap-5 max-sm:w-full">
+            <div className="p-2 h-max rounded-xl w-3/5 grid xl:grid-cols-3 md:grid-cols-2 lg:gap-10 gap-5 max-sm:w-full">
                 {
                     data ?
                         data.map(elem => {

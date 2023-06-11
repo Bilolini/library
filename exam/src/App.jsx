@@ -19,6 +19,7 @@ function App() {
     return (
         <div className='container px-3 m-auto'>
             <nav className='flex flex-row justify-around p-3 l'>
+                <NavLink className='text-2xl font-bold xl:text-xl lg:text-xl md:text-2xl sm:text-3x flex items-center gap-3' to='/'>Library <img src='https://www.svgrepo.com/show/107373/library.svg' width='25px' height='25px'/></NavLink>
                 {
                     linksMappedArray
                 }
