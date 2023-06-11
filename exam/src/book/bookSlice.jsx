@@ -7,6 +7,7 @@ export const bookSlice = createSlice({
             {
                 id: 0,
                 name: 'Algorithms',
+                author: 'Thomas Cormen and others',
                 date: '2023-05-20',
                 status: true,
                 photo: 'https://m.media-amazon.com/images/I/61Pgdn8Ys-L._AC_UF1000,1000_QL80_.jpg'
@@ -14,6 +15,7 @@ export const bookSlice = createSlice({
             {
                 id: 1,
                 name: 'Data structures',
+                author: 'Steven Skienna',
                 date: '2023-04-20',
                 status: false,
                 photo: 'https://m.media-amazon.com/images/I/71kBRLo8ZtL._AC_UF1000,1000_QL80_.jpg'

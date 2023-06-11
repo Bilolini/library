@@ -35,12 +35,21 @@ function Books() {
             <div className="w-2/5 mr-10 max-sm:w-full">
                 <form action="" onSubmit={addBook} className='grid gap-3 text-lg font-mono'>
                     <div className="lg:flex-row md:flex-col sm:flex-col flex justify-between">
-                        <label htmlFor="name basis-2/5 grow">Name</label>
+                        <label htmlFor="name">Name</label>
                         <input
                             required
+                            name='name'
                             type="text"
                             placeholder='Algorithms'
                             id="name"
+                            className="basis-3/5 border-2 p-1 rounded-md outline-orange-300 border-emerald-200" />
+                    </div>
+                    <div className="lg:flex-row md:flex-col sm:flex-col flex justify-between">
+                        <label htmlFor="author">(Co)-Author</label>
+                        <input
+                            type="text"
+                            id="author"
+                            placeholder='Donald Knuth'
                             className="basis-3/5 border-2 p-1 rounded-md outline-orange-300 border-emerald-200" />
                     </div>
                     <div className="lg:flex-row md:flex-col sm:flex-col flex justify-between">
@@ -49,7 +58,7 @@ function Books() {
                             type="text"
                             id="photo"
                             placeholder='https://google.com/photos'
-                            className="border-2 p-1 rounded-md outline-orange-300 border-emerald-200" />
+                            className="basis-3/5 border-2 p-1 rounded-md outline-orange-300 border-emerald-200" />
                     </div>
                     <div className="lg:flex-row md:flex-col sm:flex-col flex justify-between">
                         <label htmlFor="date">Date</label>
@@ -58,14 +67,14 @@ function Books() {
                             lang="en"
                             type="date"
                             id="date"
-                            className="border-2 p-1 rounded-md outline-orange-300 border-emerald-200" />
+                            className="basis-3/5 border-2 p-1 rounded-md outline-orange-300 border-emerald-200" />
                     </div>
                     <div className="flex justify-between">
                         <label htmlFor="status">Status</label>
                         <input
                             type="checkbox"
                             id="status"
-                            className="border-2 outline-orange-300 border-emerald-200" />
+                            className="basis-3/5 border-2 outline-orange-300 border-emerald-200" />
                     </div>
                     <button
                         type='submit'
