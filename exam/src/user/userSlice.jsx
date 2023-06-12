@@ -10,7 +10,7 @@ export const userSlice = createSlice({
                 level: 'Middle',
                 field: 'Frontend',
                 hobby: 'Gardening',
-                reading: {},
+                reading: 'Algorithms',
             },
             {
                 id: 1,
@@ -18,24 +18,24 @@ export const userSlice = createSlice({
                 level: 'Founder',
                 field: 'Technology',
                 hobby: 'Startups',
-                reading: {},
+                reading:  'Data structures',
             }
         ]
     },
     reducers: {
-        addUser: (state, {payload}) => {
+        addUser: (state, { payload }) => {
             state.value.push(payload)
         },
-        updateUser: (state, {payload}) => {
-            const {id} = payload;
+        updateUser: (state, { payload }) => {
+            const { id } = payload;
             state.value[id] = payload;
         },
-        deleteUser: (state, {payload}) => {
+        deleteUser: (state, { payload }) => {
             state.value = state.value.filter(elem => elem.id !== payload)
         }
     }
 })
 
-export const {addUser, updateUser, deleteUser } = userSlice.actions
+export const { addUser, updateUser, deleteUser } = userSlice.actions
 
 export default userSlice.reducer;

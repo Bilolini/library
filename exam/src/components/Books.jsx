@@ -9,7 +9,7 @@ function Books() {
     const [counterForId, setCounterForId] = useState(2);
 
     // getting data from redux
-    const data = useSelector(state => state.book.value);
+    const books = useSelector(state => state.book.value);
     const dispatch = useDispatch();
 
     // this is to send the data to add to the book.value in redux
@@ -85,8 +85,8 @@ function Books() {
             </div>
             <div className="p-2 h-max rounded-xl w-3/5 grid xl:grid-cols-3 md:grid-cols-2 lg:gap-10 gap-5 max-sm:w-full">
                 {
-                    data ?
-                        data.map(elem => {
+                    books ?
+                        books.map(elem => {
                             return (
                                 <BookItem elem={elem} key={elem.id} />
                             )
