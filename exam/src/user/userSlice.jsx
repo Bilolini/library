@@ -5,24 +5,20 @@ export const userSlice = createSlice({
     initialState: {
         value: [
             {
+                id: 0,
                 name: 'Hulk',
                 level: 'Middle',
                 field: 'Frontend',
-                prefer: [
-                    'algorithms', 'data structures'
-                ],
-                reading: [],
-                hobby: ['cooking', "videogames"]
+                hobby: 'Gardening',
+                reading: {},
             },
             {
+                id: 1,
                 name: 'Steve',
                 level: 'Founder',
                 field: 'Technology',
-                prefer: [
-                    'animation', 'product'
-                ],
-                reading: [],
-                hobby: ['calligraphy', 'startup']
+                hobby: 'Startups',
+                reading: {},
             }
         ]
     },
