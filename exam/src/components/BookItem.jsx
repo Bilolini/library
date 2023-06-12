@@ -14,15 +14,15 @@ function BookItem({ elem }) {
 
     return (
         <div className='h-max text-center p-4 border-2 border-emerald-400 text-sm font-mono flex flex-col gap-2'>
-            <img src={update.photo} className='max-sm:h-80 h-64 w-full' alt="" />
+            <img src={update.photo} className='max-sm:h-96 h-80 w-full' alt="" />
             <h3 className='font-bold truncate'>{update.name}</h3>
             <h3 className='font-bold truncate'>{update.author}</h3>
             <p>{update.date}</p>
             <p>{update.status ? '😊 available' : '😥 given out'}</p>
-            <button className='border-2 border-orange-300 bg-yellow-200 text p-2' onClick={() => setChange(prev => !prev)} >Update</button>
+            <button className='border-2 border-sky-300 bg-green-300 text p-2' onClick={() => setChange(prev => !prev)} >Update</button>
             <button
                 type='delete'
-                className='p-2 border-2 border-pink-300 bg-red-200 text'
+                className='p-2 border-2 border-violet-300 bg-purple-200 text'
                 onClick={() => dispatch(deleteBook(elem.id))}>Delete</button>
             {
                 change
@@ -31,34 +31,34 @@ function BookItem({ elem }) {
                         <input
                             value={update.name}
                             type="text"
-                            className="w-full border-2 p-1 rounded-md outline-orange-300 border-emerald-200"
+                            className="w-full border-2 p-1 rounded-md outline-sky-300 border-emerald-200"
                             onChange={event => setUpdate({ ...update, name: event.target.value })} />
                          <input
                             value={update.author}
                             type="text"
-                            className="w-full border-2 p-1 rounded-md outline-orange-300 border-emerald-200"
+                            className="w-full border-2 p-1 rounded-md outline-sky-300 border-emerald-200"
                             onChange={event => setUpdate({ ...update, author: event.target.value })} />
                         <input
                             type="date"
-                            className="border-2 p-1 rounded-md outline-orange-300 border-emerald-200"
+                            className="border-2 p-1 rounded-md outline-sky-300 border-emerald-200"
                             value={update.date}
                             onChange={event => setUpdate({ ...update, date: event.target.value })}
                         />
                         <input
                             type="text"
                             value={update.photo}
-                            className="border-2 p-1 rounded-md outline-orange-300 border-emerald-200"
+                            className="border-2 p-1 rounded-md outline-sky-300 border-emerald-200"
                             onChange={event => setUpdate({ ...update, photo: event.target.value })}
                         />
                         <input
                             type="checkbox"
                             id="status"
-                            className="border-2 outline-orange-300 border-emerald-200"
+                            className="border-2 outline-sky-300 border-emerald-200"
                             onChange={event => setUpdate({ ...update, status: event.target.checked })}
                             checked={update.status} />
                         <button
                             type="button"
-                            className='p-2 border-2 border-orange-300 bg-yellow-200 text'
+                            className='p-2 border-2 border-sky-300 bg-yellow-200 text'
                             onClick={() => handleClick(elem.id)}>Save</button>
 
                     </form>

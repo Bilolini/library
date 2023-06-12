@@ -37,6 +37,11 @@ export const bookSlice = createSlice({
         deleteBook: (state, {payload}) => {
             state.value = state.value.filter(elem => elem.id !== payload)
             console.log(state.value)
+        },
+        sorted: (state, {payload}) => {
+            state.value = state.value.sort((a, b) => {
+                return a[payload] > b[payload] ? 1: -1;
+            })
         }
     }
 })
