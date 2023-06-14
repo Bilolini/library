@@ -9,7 +9,7 @@ const router = createBrowserRouter(
         <Route path='/' element={<App />}>
             <Route path='books' element={<Books />} />
             <Route path='users' element={<Users />}/>
-            <Route path='main' element={<Main />} />
+            <Route index element={<Main />} />
         </Route>
     )
 )

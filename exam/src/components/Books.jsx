@@ -36,7 +36,7 @@ function Books() {
         <div >
             <div className='xl:justify-around flex gap-5 max-sm:flex-col px-4 h-max items-center md:justify-normal mb-10'>
                 <div className="xl:w-2/5 w-3/5 p-2 max-md:w-3/5 max-sm:w-full rounded-xl">
-                    <img src="books.jpg" alt="Beautiful image" className='w-full h-96 rounded-2xl' />
+                    <img src="books.jpg" alt="Beautiful image" className='w-full h-full rounded-2xl' />
                 </div>
                 <div className="w-2/5 p-4 max-md:w-2/5 max-sm:w-full h-max rounded-xl">
                     <form action="" onSubmit={addBook} className='grid gap-3 text-lg font-mono'>

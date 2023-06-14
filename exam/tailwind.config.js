@@ -11,7 +11,7 @@ export default {
                 base: '1.5rem',
                 md: '1.8rem',
                 xl: '2rem',
-                '2xl': '3.563rem',
+                '2xl': '2.5rem',
                 '3xl': '3.953rem',
                 '4xl': '3.441rem',
                 '5xl': '4.052rem',

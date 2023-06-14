@@ -10,7 +10,7 @@ function Users() {
     const leftBooks = [];
     const readBooks = users.map(elem => elem.reading);
     books.forEach(book => {
-        if (!readBooks.includes(book.name)) {
+        if (!readBooks.includes(book.name) && book.status) {
             leftBooks.push(book)
         }
     })
@@ -93,7 +93,7 @@ function Users() {
                     </form>
                 </div>
                 <div className="xl:w-2/5 w-3/5 p-2 max-md:w-3/5 max-sm:w-full rounded-xl">
-                    <img src="buffet.jpg" alt="Warren Buffet reading a book" className='w-full h-96 rounded-2xl' />
+                    <img src="buffet.jpg" alt="Warren Buffet reading a book" className='w-full h-full rounded-2xl' />
                 </div>
             </div>
             <div className="p-2 h-max rounded-xl w-full grid xl:grid-cols-3 md:grid-cols-2 lg:gap-10 gap-5 max-sm:w-full">

@@ -1,16 +1,16 @@
 import { NavLink, Outlet } from 'react-router-dom'
 const linksArray = [
     {
+        to: '/',
+        name: 'World libraries'
+    },
+    {
         to: 'books',
         name: 'Books'
     },
     {
         to: 'users',
         name: 'Users'
-    },
-    {
-        to: 'main',
-        name: 'World libraries'
     }
 ]
 

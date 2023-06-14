@@ -17,15 +17,12 @@ export const bookSlice = createSlice({
                 name: 'Data structures',
                 author: 'Steven Skienna',
                 date: '2023-04-20',
-                status: false,
+                status: true,
                 photo: 'https://m.media-amazon.com/images/I/71kBRLo8ZtL._AC_UF1000,1000_QL80_.jpg'
             }
         ]
     },
     reducers: {
-        // increment: state => {
-        //     state.value += 1
-        // }
         add: (state, {payload}) => {
             // console.log(payload)
             state.value.push(payload)

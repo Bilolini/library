@@ -6,19 +6,19 @@ function Main() {
             id: 1,
             order: 1,
             name: 'Harvard library',
-            url: 'https://kienviet.net/wp-content/uploads/2020/12/2-19.jpg'
+            url: 'harvard.jpg'
         },
         {
             id: 2,
             order: 2,
             name: 'Yale library',
-            url: 'https://library.yale.edu/sites/default/files/beinecke720.jpeg'
+            url: 'yale.jpg'
         },
         {
             id: 3,
             order: 3,
             name: 'John Hopkins library',
-            url: 'https://www.timeshighereducation.com/student/sites/default/files/inline-images/Peabody%20Petroff.jpg'
+            url: 'john-hopkins.jpg'
         }
     ];
     const [cardList, setCardList] = useState(worldLibraries);

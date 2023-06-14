@@ -4,6 +4,14 @@ import { deleteUser, updateUser } from '../user/userSlice';
 
 function UserItem({elem}) {
     let books = useSelector(state => state.book.value);
+    // const users = useSelector(state => state.user.value);
+    const leftBooks = [];
+    // const readBooks = users.map(elem => elem.reading);
+    books.forEach(book => {
+        if (book.status && book.name !== elem.reading) {
+            leftBooks.push(book)
+        }
+    })
     const dispatch = useDispatch();
     const [change, setChange] = useState(false);
     const [update, setUpdate] = useState({ name: elem.name, field: elem.field, level: elem.level, hobby: elem.hobby, reading: elem.reading});
@@ -55,10 +63,13 @@ function UserItem({elem}) {
                             value={update.reading}
                             onChange={event => setUpdate({ ...update, reading: event.target.value })}
                         /> */}
-                        <select onChange={event => setUpdate({ ...update, reading: event.target.value })} name="reading" id="reading" className="basis-3/5 border-2 p-1 rounded-md outline-sky-300 border-emerald-200">
+                        <select onChange={event => setUpdate({ ...update, reading: event.target.value })} 
+                        name="reading" 
+                        id="reading" 
+                        className="basis-3/5 border-2 p-1 rounded-md outline-sky-300 border-emerald-200">
                             {/* I should check wheher the previous users took the bookand whether to take the book myself */}
                             {
-                                books.map(elem => {
+                                leftBooks.map(elem => {
                                     return (
                                         <option  value={elem.name} key={elem.id}>{elem.name}</option>
                                     )
